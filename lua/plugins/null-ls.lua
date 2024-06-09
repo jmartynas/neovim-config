@@ -9,9 +9,9 @@ return {
 			sources = {
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.gofumpt,
-				null_ls.builtins.formatting.goimports_reviser,
+				null_ls.builtins.formatting.goimports,
 				null_ls.builtins.diagnostics.golangci_lint,
-				null_ls.builtins.diagnostics.golines,
+				null_ls.builtins.formatting.golines,
 			},
 
 			on_attach = function(client, bufnr)

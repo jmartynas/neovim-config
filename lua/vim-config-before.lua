@@ -26,6 +26,8 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	end,
 })
 
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
 --[[vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
 		--vim.api.nvim_set_hl(0, "Visual", { bg = "#22272" })
