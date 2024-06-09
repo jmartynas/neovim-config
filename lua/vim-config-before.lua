@@ -4,6 +4,9 @@ vim.keymap.set("n", "<leader>ss", function()
 	vim.cmd(":Ex")
 end)
 
+vim.o.number = true
+vim.o.relativenumber = true
+
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*.go",
 	callback = function()
