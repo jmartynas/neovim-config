@@ -8,6 +8,7 @@ return {
 				"lua_ls",
 				"gopls",
 				"gofumpt",
+				"typescript-language-server"
 			},
 		})
 	end
