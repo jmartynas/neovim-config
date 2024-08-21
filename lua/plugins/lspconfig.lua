@@ -2,10 +2,19 @@ return {
 	"neovim/nvim-lspconfig",
 	config = function()
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
 		local lspconfig = require("lspconfig")
+
+		lspconfig.htmx.setup{}
+		lspconfig.html.setup{}
+
 		lspconfig.lua_ls.setup({
 			capabilities = capabilities,
+		})
+
+		lspconfig.tsserver.setup({
+			on_attach =  on_attach,
+			filetypes = { "typescript" },
+			cmd = { "typescript-language-server", "--stdio" }
 		})
 
 		lspconfig.gopls.setup({

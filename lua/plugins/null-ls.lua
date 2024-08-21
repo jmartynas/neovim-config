@@ -1,6 +1,6 @@
 return {
 	"nvimtools/none-ls.nvim",
-	ft = { "go", "lua" },
+	ft = { "go", "lua", "html", "typescript" },
 	opts = function() end,
 	config = function()
 		local null_ls = require("null-ls")
@@ -12,6 +12,7 @@ return {
 				null_ls.builtins.formatting.goimports,
 				null_ls.builtins.diagnostics.golangci_lint,
 				null_ls.builtins.formatting.golines,
+				null_ls.builtins.formatting.prettier,
 			},
 
 			on_attach = function(client, bufnr)
