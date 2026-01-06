@@ -8,8 +8,9 @@ return {
 				"lua_ls",
 				"gopls",
 				"gofumpt",
-				"typescript-language-server"
+				"typescript-language-server",
+				"terraformls",
 			},
 		})
-	end
+	end,
 }

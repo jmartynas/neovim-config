@@ -31,8 +31,16 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
---[[vim.api.nvim_create_autocmd("ColorScheme", {
-	callback = function()
-		--vim.api.nvim_set_hl(0, "Visual", { bg = "#22272" })
-	end,
-})--]]
+vim.diagnostic.config({
+	virtual_text = {
+		prefix = "●", -- Change to "" for no symbol
+		spacing = 2,
+		format = function(diagnostic)
+			return string.format("%s", diagnostic.message) -- Show only the message
+		end,
+	},
+	signs = true, -- Keep signs in the gutter
+	underline = true,
+	update_in_insert = false,
+	severity_sort = true,
+})
