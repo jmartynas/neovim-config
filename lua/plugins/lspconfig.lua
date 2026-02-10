@@ -10,9 +10,8 @@ return {
 		})
 
 		lspconfig.csharp_ls.setup({
-			cmd = { "csharp-ls" },
-			filetypes = { "cs", "vb", "aspx", "asp" },
-			root_dir = lspconfig.util.root_pattern(".git", "project.json", "AssemblyInfo.cs"),
+			cmd = { os.getenv("HOME") .. "/.local/share/nvim/mason/bin/csharp-ls" },
+			root_dir = lspconfig.util.root_pattern("*.sln", "*.csproj", ".git"),
 			settings = {
 				-- Add any csharp-language-server specific settings here
 			},
