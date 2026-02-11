@@ -31,16 +31,16 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	end,
 })
 
-vim.api.nvim_create_autocmd("VimLeavePre", {
-	pattern = "*",
-	callback = function()
-		local cwd = vim.fn.getcwd()
-		if vim.fn.glob(cwd .. "/*.sln") ~= "" or vim.fn.glob(cwd .. "/*.csproj") ~= "" then
-			print("Formatting .NET project...")
-			os.execute("dotnet format " .. cwd)
-		end
-	end
-})
+--vim.api.nvim_create_autocmd("VimLeavePre", {
+--	pattern = "*",
+--	callback = function()
+--		local cwd = vim.fn.getcwd()
+--		if vim.fn.glob(cwd .. "/*.sln") ~= "" or vim.fn.glob(cwd .. "/*.csproj") ~= "" then
+--			print("Formatting .NET project...")
+--			os.execute("dotnet format " .. cwd)
+--		end
+--	end
+--})
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 

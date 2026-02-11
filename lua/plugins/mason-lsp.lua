@@ -6,10 +6,8 @@ return {
 		require("mason-lspconfig").setup({
 			ensure_installed = {
 				"lua_ls",
-				"gopls",
-				"gofumpt",
 				"typescript-language-server",
-				"terraformls",
+				"csharp_language_server",
 			},
 		})
 	end,
